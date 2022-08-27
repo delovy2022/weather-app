@@ -13,6 +13,11 @@ div {
   font-family: PT Mono, monospace;
   margin-block-start: 1em;
   margin-block-end: 1em;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 li {
   list-style: none;
