@@ -1,0 +1,19 @@
+body {
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+}
+section {
+  margin: 40px 80px;
+}
+img {
+  margin: 10px;
+}
+div {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: PT Mono, monospace;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+li {
+  list-style: none;
+}
