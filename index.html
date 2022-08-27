@@ -11,33 +11,28 @@
     </head>
 <body>
     <section>
-    <img src="weather.jpg" width="150" />
         <div class="container">
-        <main>  
-            <div class="row">
-            <div class="col">
+        <main>
+                <img src="images/weather.jpg" width="150" /> 
     <form id="search-form">
-          <div class="mb-3">
+            <div class="row">
+                    <div class="col-8">
                     <input
               type="location"
               class="form-control" placeholder="Enter your city"
               id="exampleInputlocation"
               aria-describedby="locationHelp"
-            />
-                  <div class="col">
+              />
+          </div>
+                  <div class="col-2">
             <button type="submit" class="btn btn-primary">Search</button>
-            <span>
+        </div>
+                    <div class="col-2">
                     <button type="button" class="btn btn-success" id="geo">Current</button>
-                </span>
+                    </div>
         </div>
           </div>
         </form>
-      </div>
-         
-            <div class="col d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark p-1 position-absolute top-1 end-1 mt-4">Share</button>
-            </div>
-            </div>
         </main>
     <ul>
         <div class="row">
