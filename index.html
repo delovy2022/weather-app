@@ -12,7 +12,7 @@
 <body>
     <section>
         <div class="container">
-        <main>
+        <div class="Weather-App">
                 <img src="images/weather.jpg" width="150" /> 
     <form id="search-form">
             <div class="row">
@@ -41,12 +41,12 @@
             <h5>Tuesday 16:00</h5>
                 </div>
             <div class="col-4">
-            <li style="display:inline" id="description">Cloudy</li>
-            <li style="display:inline" id="humid"></li>
+            <li id="description">Cloudy</li>
+            <li id="humid"></li>
             <li id="wind"></li>
-            <p id="maxmin">
+            <h6 id="maxmin">
                     Today 24°C/15°C
-            </p>
+            </h6>
                 </div>
             <div class="col-4">
                 <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy" />
@@ -71,13 +71,14 @@
            <button type="button" class="btn btn-link p-3">More Information</button>
            </div>
         </footer>
-        </div>
-         <p>
+         <small>
         <a href="https://github.com/delovy2022/weatherapp" target="_blank" class=learn>
             Open-source code
                   </a> 
-                  <span>,by Abosede Adelaja</span>
-                </p>
+                  by Abosede Adelaja
+         </small>
+         </div>
+        </div>
         </section>
         <script src="index.js"></script>
     </body>

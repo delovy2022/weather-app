@@ -21,4 +21,7 @@ div {
 }
 li {
   list-style: none;
+  color: #70757a;
+  font-size: 14px;
+  line-height: 16px;
 }
