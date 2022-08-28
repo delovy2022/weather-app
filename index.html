@@ -12,6 +12,7 @@
 <body>
     <section>
         <div class="container">
+             <div class="weather-app-wrapper">
         <div class="Weather-App">
                 <img src="images/weather.jpg" width="150" /> 
     <form id="search-form">
@@ -36,7 +37,7 @@
         </main>
     <ul>
                 <div class="row">
-                <div class="col-4">
+                <div class="col-4" id="overview">
                 <h2 id="citiy"></h2>
             <h5>Tuesday 16:00</h5>
                 </div>
@@ -49,12 +50,16 @@
             </h6>
                 </div>
             <div class="col-4">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly cloudy" />
-                    <span id="tempa"></span>
-                </div>
-                    </div>
+                <div class="d-flex weather-temperature">
+  <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear" id="icon" />
+  <div>
+    <strong id="tempa"></strong
+    ><span class="units"></span>
+  </div>
+</div>
         </ul>
     </br>
+    <div class="weather-forecast" id="forecast">
         <div class="row">
             <div class="col-3 mx-auto">
             Friday 23°C/13°C
@@ -66,19 +71,21 @@
            <div class="col-3 mx-auto">
             Monday 30°C/15°C</div>
           </div>
+          </div>
         <footer>
             <div class="text-center">
            <button type="button" class="btn btn-link p-3">More Information</button>
            </div>
         </footer>
+        </div>
+        </div>
+        </div>
          <small>
         <a href="https://github.com/delovy2022/weatherapp" target="_blank" class=learn>
             Open-source code
                   </a> 
                   by Abosede Adelaja
          </small>
-         </div>
-        </div>
         </section>
         <script src="index.js"></script>
     </body>
