@@ -12,8 +12,9 @@
 <body>
     <section>
         <div class="container">
-             <div class="weather-app-wrapper">
-        <div class="Weather-App">
+                <div class="weather-app-wrapper">
+                <div class="weather-app">
+        <main>
                 <img src="images/weather.jpg" width="150" /> 
     <form id="search-form">
             <div class="row">
@@ -22,8 +23,7 @@
               type="location"
               class="form-control" placeholder="Enter your city"
               id="exampleInputlocation"
-              aria-describedby="locationHelp"
-              />
+              aria-describedby="locationHelp">
           </div>
                   <div class="col-2 p-1">
             <button type="submit" class="btn btn-primary">Search</button>
@@ -32,35 +32,33 @@
                     <button type="button" class="btn btn-success" id="geo">Current</button>
                     </div>
         </div>
-          </div>
         </form>
         </main>
-    <ul>
-                <div class="row">
-                <div class="col-4" id="overview">
+                <div class="row align-items-center">
+                <div class="col-4 id="start">
                 <h2 id="citiy"></h2>
             <h5>Tuesday 16:00</h5>
                 </div>
-            <div class="col-4">
-            <li id="description">Cloudy</li>
-            <li id="humid"></li>
+            <div class="col-4 id="overview">
+            <li  id="description">Cloudy</li>
+            <li  id="humid"></li>
             <li id="wind"></li>
             <h6 id="maxmin">
                     Today 24°C/15°C
             </h6>
                 </div>
             <div class="col-4">
-                <div class="d-flex weather-temperature">
-  <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear" id="icon" />
-  <div>
-    <strong id="tempa"></strong
-    ><span class="units"></span>
-  </div>
-</div>
-        </ul>
+                    <div class="d-flex weather-temperature">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear" id="icon" />
+                            <div>
+                              <strong id="tempa"></strong><span class="units">°C|<a href="$">°F</span>
+                            </div>
+                </div>
+            </div>
+        </div>
     </br>
     <div class="weather-forecast" id="forecast">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-3 mx-auto">
             Friday 23°C/13°C
     </div>
@@ -79,13 +77,13 @@
         </footer>
         </div>
         </div>
-        </div>
          <small>
         <a href="https://github.com/delovy2022/weatherapp" target="_blank" class=learn>
             Open-source code
                   </a> 
                   by Abosede Adelaja
          </small>
+         </div>
         </section>
         <script src="index.js"></script>
     </body>
