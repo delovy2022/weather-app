@@ -21,18 +21,14 @@ function formateDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 function showTemperature(response) {
-  console.log(response);
   let currentTemperature = Math.round(response.data.main.temp);
-  console.log(currentTemperature);
   let currentTempmin = Math.round(response.data.main.temp_min);
-  console.log(currentTempmin);
   let currentTempmax = Math.round(response.data.main.temp_max);
-  console.log(currentTempmax);
   let currentWind = Math.round(response.data.wind.speed);
+  let currentHumidity = response.data.main.humidity;
   document.querySelector(`#wind`).innerHTML = `Windspeed:${currentWind}km/h`;
   document.querySelector(`#description`).innerHTML =
     response.data.weather[0].description;
-  let currentHumidity = response.data.main.humidity;
   document.querySelector(`#tempa`).innerHTML = `${currentTemperature}`;
   document.querySelector(`#citiy`).innerHTML = response.data.name;
   document.querySelector(
@@ -59,6 +55,5 @@ function handleSearch(event) {
   let cityInputElement = document.querySelector(`#exampleInputlocation`).value;
   search(cityInputElement);
 }
-
 let form = document.querySelector(`#search-form`);
 form.addEventListener(`submit`, handleSearch);
