@@ -48,3 +48,17 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+function search(city) {
+  let apiKey = `8290d80f32ed8484ecefb6a0a00a5330`;
+  let units = `metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+function handleSearch(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector(`#exampleInputlocation`).value;
+  search(cityInputElement);
+}
+
+let form = document.querySelector(`#search-form`);
+form.addEventListener(`submit`, handleSearch);
