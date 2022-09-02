@@ -55,5 +55,6 @@ function handleSearch(event) {
   let cityInputElement = document.querySelector(`#exampleInputlocation`).value;
   search(cityInputElement);
 }
+search("New York");
 let form = document.querySelector(`#search-form`);
 form.addEventListener(`submit`, handleSearch);
