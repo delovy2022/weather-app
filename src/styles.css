@@ -60,6 +60,9 @@ ul {
 #humid, #wind {
   color: red;
 }
+a {
+  text-decoration:none;  
+}
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
