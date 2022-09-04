@@ -21,14 +21,10 @@ function formateDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 function showTemperature(response) {
-  console.log(response);
   celsiusTemperature = response.data.main.temp;
   let currentTemperature = Math.round(celsiusTemperature);
-  console.log(currentTemperature);
   let currentTempmin = Math.round(response.data.main.temp_min);
-  console.log(currentTempmin);
   let currentTempmax = Math.round(response.data.main.temp_max);
-  console.log(currentTempmax);
   let currentWind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
   document.querySelector(`#wind`).innerHTML = `Windspeed:${currentWind}km/h`;
