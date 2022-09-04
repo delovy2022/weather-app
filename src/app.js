@@ -21,10 +21,14 @@ function formateDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 function showTemperature(response) {
+  console.log(response);
   celsiusTemperature = response.data.main.temp;
   let currentTemperature = Math.round(celsiusTemperature);
+  console.log(currentTemperature);
   let currentTempmin = Math.round(response.data.main.temp_min);
+  console.log(currentTempmin);
   let currentTempmax = Math.round(response.data.main.temp_max);
+  console.log(currentTempmax);
   let currentWind = Math.round(response.data.wind.speed);
   let currentHumidity = response.data.main.humidity;
   document.querySelector(`#wind`).innerHTML = `Windspeed:${currentWind}km/h`;
@@ -58,11 +62,11 @@ function handleSearch(event) {
 }
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  let temperatureElement = document.querySelector(`#tempa`);
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector(`#tempa`);
-  temperatureElement.innerHTML = math.round(fahrenheitTemperature);
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 function displayCelsiusTemperature(event) {
   event.preventDefault();
@@ -72,7 +76,6 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 let celsiusTemperature = null;
-
 let form = document.querySelector(`#search-form`);
 form.addEventListener(`submit`, handleSearch);
 let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
