@@ -34,7 +34,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (forecast, index) {
-    if (index < 6)
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `
@@ -53,6 +53,7 @@ function displayForecast(response) {
   )}°C</span></div>
   </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
