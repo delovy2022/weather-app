@@ -79,9 +79,6 @@ function showTemperature(response) {
     response.data.weather[0].description;
   document.querySelector(`#tempa`).innerHTML = `${currentTemperature}`;
   document.querySelector(`#citiy`).innerHTML = response.data.name;
-  document.querySelector(
-    `#maxmin`
-  ).innerHTML = `Today ${currentTempmax}°C/${currentTempmin}°C`;
   document.querySelector(`#humid`).innerHTML = `Humidity:${currentHumidity}%`;
   let dateElement = document.querySelector("#daytime");
   dateElement.innerHTML = formateDate(response.data.dt * 1000);
