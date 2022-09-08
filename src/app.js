@@ -29,11 +29,11 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector(`#forecast`);
 
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (forecast, index) {
+  forecast.forEach(function (forecast, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
@@ -53,7 +53,6 @@ function displayForecast(response) {
   )}°C</span></div>
   </div>
   `;
-    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
