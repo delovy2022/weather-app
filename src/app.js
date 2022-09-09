@@ -127,4 +127,21 @@ let fahrenheitLink = document.querySelector(`#fahrenheit-link`);
 fahrenheitLink.addEventListener(`click`, displayFahrenheitTemperature);
 let celsiusLink = document.querySelector(`#celsius-link`);
 celsiusLink.addEventListener(`click`, displayCelsiusTemperature);
+
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  console.log(lat);
+  console.log(lon);
+  let apiKey = `c95d60a1e3adbeb286133f1ebebc2579`;
+  let units = `metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+function current() {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+let button = document.querySelector(`#geo`);
+button.addEventListener(`click`, current);
 search("New York");
