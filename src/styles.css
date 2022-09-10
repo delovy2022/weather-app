@@ -35,10 +35,6 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
-ul {
-  margin: 0;
-  padding: 0;
-}
 .weather-temperature img {
   padding: 0;
   height: 60px;
